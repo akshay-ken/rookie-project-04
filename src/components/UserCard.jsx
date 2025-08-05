@@ -1,5 +1,5 @@
 import avtar from "../assets/images/image-jeremy.png";
-export function UserCard() {
+export function UserCard({ handleDaily, handleWeekly, handleMonthly }) {
   return (
     <div className="w-sm bg-Navy-900 flex flex-col rounded-3xl">
       <div className="basis-9/12 bg-Purple-600 p-6 rounded-3xl flex-row flex items-center gap-x-6">
@@ -15,9 +15,15 @@ export function UserCard() {
       </div>
       <div className="basis-3/12">
         <div className="flex text-xl flex-row p-4 justify-around">
-          <button className="text-gray-400">Daily</button>
-          <button className="text-white">Weekly</button>
-          <button className="text-gray-400">Monthly</button>
+          <button className="text-gray-400" onClick={handleDaily}>
+            Daily
+          </button>
+          <button className="text-white" onClick={handleWeekly}>
+            Weekly
+          </button>
+          <button className="text-gray-400" onClick={handleMonthly}>
+            Monthly
+          </button>
         </div>
       </div>
     </div>

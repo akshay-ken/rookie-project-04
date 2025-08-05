@@ -8,6 +8,7 @@ import selfcareIcon from "../assets/images/icon-self-care.svg";
 import socialIcon from "../assets/images/icon-social.svg";
 import studyIcon from "../assets/images/icon-study.svg";
 import workIcon from "../assets/images/icon-work.svg";
+import { useState } from "react";
 
 const iconMap = {
   Play: playIcon,
@@ -19,6 +20,16 @@ const iconMap = {
 };
 
 export function MainPage() {
+  const [timeFrame, setTimeFrame] = useState("Daily");
+  function handleDailyTimeFrame() {
+    setTimeFrame("Daily");
+  }
+  function handleMonthlyTimeFrame() {
+    setTimeFrame("Monthly");
+  }
+  function handleWeeklyTimeFrame() {
+    setTimeFrame("Weekly");
+  }
   return (
     <main className="w-full h-lvh flex flex-col items-center gap-y-8 mt-24">
       <UserCard />
