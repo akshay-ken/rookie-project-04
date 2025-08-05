@@ -32,7 +32,12 @@ export function MainPage() {
   }
   return (
     <main className="w-full h-lvh flex flex-col items-center gap-y-8 mt-24">
-      <UserCard />
+      <UserCard
+        currentTimeFrame={timeFrame}
+        handleDaily={handleDailyTimeFrame}
+        handleMonthly={handleMonthlyTimeFrame}
+        handleWeekly={handleWeeklyTimeFrame}
+      />
       {data.map((profile) => {
         return <StaticsCard />;
       })}
