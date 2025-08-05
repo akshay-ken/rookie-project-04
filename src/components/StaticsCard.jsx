@@ -10,7 +10,7 @@ export function StaticsCard() {
         <div className="flex flex-row items-center justify-between ">
           <p className="text-xl text-white">Work</p>
 
-          <img src={dots} className="w-6 h-2" alt="" />
+          <img src={dots} className="w-7 h-2" alt="" />
         </div>
         <div className="flex flex-row mt-2 items-center justify-between">
           <p className="font-thin text-3xl text-white">32hrs</p>
