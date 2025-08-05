@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 
+@layer base {
+  body {
+    @apply bg-Navy-950 font-one;
+  }
+}
+
 @theme {
   --color-Purple-600: hsl(246, 80%, 60%);
   --color-Orange-work: hsl(15, 100%, 70%);
