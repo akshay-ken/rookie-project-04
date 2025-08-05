@@ -39,9 +39,40 @@ export function MainPage() {
         handleWeekly={handleWeeklyTimeFrame}
       />
       {data.map((profile) => {
-        return <StaticsCard />;
+        if (timeFrame === "Daily") {
+          return (
+            <StaticsCard
+              lastTime={"Day"}
+              imgIcon={iconMap[profile.title]}
+              title={profile.title}
+              currentTime={profile.timeframes.daily.current}
+              previousTime={profile.timeframes.daily.previous}
+            />
+          );
+        }
+        if (timeFrame === "Weekly") {
+          return (
+            <StaticsCard
+              lastTime={"Week"}
+              imgIcon={iconMap[profile.title]}
+              title={profile.title}
+              currentTime={profile.timeframes.weekly.current}
+              previousTime={profile.timeframes.weekly.previous}
+            />
+          );
+        }
+        if (timeFrame === "Monthly") {
+          return (
+            <StaticsCard
+              lastTime={"Monthly"}
+              imgIcon={iconMap[profile.title]}
+              title={profile.title}
+              currentTime={profile.timeframes.monthly.current}
+              previousTime={profile.timeframes.monthly.previous}
+            />
+          );
+        }
       })}
-      <StaticsCard />
     </main>
   );
 }
