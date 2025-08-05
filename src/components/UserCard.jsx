@@ -5,7 +5,7 @@ export function UserCard() {
       <div className="basis-9/12 bg-Purple-600 p-6 rounded-3xl flex-row flex items-center gap-x-6">
         <img
           src={avtar}
-          className="size-16 rounded-full ring-2 ring-white"
+          className="size-16 rounded-full ring-3 ring-white"
           alt=""
         />
         <div className="flex flex-col">
