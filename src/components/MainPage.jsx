@@ -31,7 +31,7 @@ export function MainPage() {
     setTimeFrame("Weekly");
   }
   return (
-    <main className="w-full h-lvh flex flex-col items-center gap-y-8 mt-24">
+    <main className="w-full min-h-lvh  flex flex-col items-center gap-y-8 my-16 md:grid md:grid-cols-12 md:grid-rows-8 md:p-[8vw] md:my-0 md:gap-6">
       <UserCard
         currentTimeFrame={timeFrame}
         handleDaily={handleDailyTimeFrame}
@@ -64,7 +64,7 @@ export function MainPage() {
         if (timeFrame === "Monthly") {
           return (
             <StaticsCard
-              lastTime={"Monthly"}
+              lastTime={"Month"}
               imgIcon={iconMap[profile.title]}
               title={profile.title}
               currentTime={profile.timeframes.monthly.current}
